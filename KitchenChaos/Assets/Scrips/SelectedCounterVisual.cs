@@ -6,7 +6,7 @@ public class SelectedCounterVisual : MonoBehaviour
 {
     [SerializeField] protected ClearCounter clearCounter;
     [SerializeField] protected GameObject visualGameobject;
-
+    
     private void Start()
     {
         Player.Instance.OnSelectedCounterChanged += Player_OnSelectedCounterChanged; ;
@@ -14,7 +14,7 @@ public class SelectedCounterVisual : MonoBehaviour
 
     private void Player_OnSelectedCounterChanged(object sender, Player.OnSelectedCounterChangedEventArgs e)
     {
-        Debug.Log("gr");
+        
         if (e.selectedCounter == clearCounter)
         {
             Show();
