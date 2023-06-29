@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8249954731658167693}
   - component: {fileID: -5323518685000290074}
   m_Layer: 6
-  m_Name: ContainerCounter
+  m_Name: ContainerCounter_Bread
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,7 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counterTopPoint: {fileID: 3594870360951753377}
-  kitchenObjectSO: {fileID: 0}
+  kitchenObjectSO: {fileID: 11400000, guid: 1544c8549ec807f4986db780fbe8a6af, type: 2}
 --- !u!1 &5143563964179471969
 GameObject:
   m_ObjectHideFlags: 0
