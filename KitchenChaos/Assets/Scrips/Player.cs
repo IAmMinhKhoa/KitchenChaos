@@ -145,7 +145,7 @@ public class Player : MonoBehaviour,IKitchenObjectParent
         OnSelectedCounterChanged?.Invoke(this, new OnSelectedCounterChangedEventArgs
         {
             selectedCounter = selectedCounter
-        }); ;
+        }); 
     }
 
     public Transform GetKitchenObjectFollowTransform()

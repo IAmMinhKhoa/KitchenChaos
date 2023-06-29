@@ -35,6 +35,6 @@ public class KitchenObject : MonoBehaviour
     }
     public IKitchenObjectParent GetClearCounter()
     {
-        return this.kitchenObjectParent;
+        return kitchenObjectParent;
     }
 }

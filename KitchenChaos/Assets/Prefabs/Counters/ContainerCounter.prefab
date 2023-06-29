@@ -69,8 +69,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 737d228f1a2e9f444b5ba2a596afd677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kitchenObjectSO: {fileID: 11400000, guid: a6ee35a358f0a7c46838d87db4d67cc4, type: 2}
   counterTopPoint: {fileID: 3594870360951753377}
+  kitchenObjectSO: {fileID: 11400000, guid: a6ee35a358f0a7c46838d87db4d67cc4, type: 2}
 --- !u!1 &5143563964179471969
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,7 +232,8 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1a0afd856a35421469b28b916116fd9c, type: 2}
     m_RemovedComponents:
     - {fileID: 6289625630049244101, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5261771210811040880, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4589716710238282922, guid: 9a9137fa2b035d34e881701d2c178192,
@@ -240,6 +241,18 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 7901264806038789854}
   m_SourcePrefab: {fileID: 100100000, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
+--- !u!1 &1396576450405991240 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 353237590725857035, guid: 9a9137fa2b035d34e881701d2c178192,
+    type: 3}
+  m_PrefabInstance: {fileID: 1695413215622040643}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1651418351151302830 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 102550813385737453, guid: 9a9137fa2b035d34e881701d2c178192,
+    type: 3}
+  m_PrefabInstance: {fileID: 1695413215622040643}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2897681881548646632 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4589716710238282923, guid: 9a9137fa2b035d34e881701d2c178192,
@@ -264,8 +277,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcb2d415a6f83d0409acbd18641bc165, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clearCounter: {fileID: 0}
-  visualGameobject: {fileID: 0}
+  baseCounter: {fileID: -5323518685000290074}
+  visualGameobject:
+  - {fileID: 8934134197801711916}
+  - {fileID: 7387784422719674021}
+  - {fileID: 1396576450405991240}
+  - {fileID: 1651418351151302830}
+--- !u!1 &7387784422719674021 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8143070647044102886, guid: 9a9137fa2b035d34e881701d2c178192,
+    type: 3}
+  m_PrefabInstance: {fileID: 1695413215622040643}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8934134197801711916 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7816906318471787887, guid: 9a9137fa2b035d34e881701d2c178192,
+    type: 3}
+  m_PrefabInstance: {fileID: 1695413215622040643}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3161655707736951216
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -337,8 +366,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4589716710238282922, guid: 9a9137fa2b035d34e881701d2c178192,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7240155662687309252}
   m_SourcePrefab: {fileID: 100100000, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
+--- !u!1 &1464098802864631066 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4589716710238282922, guid: 9a9137fa2b035d34e881701d2c178192,
+    type: 3}
+  m_PrefabInstance: {fileID: 3161655707736951216}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7240155662687309252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464098802864631066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a9d1f0628cfee441aa7119cd1ac7560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  containerCounter: {fileID: -5323518685000290074}
 --- !u!4 &1464098802864631067 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4589716710238282923, guid: 9a9137fa2b035d34e881701d2c178192,
