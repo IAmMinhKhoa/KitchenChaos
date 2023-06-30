@@ -70,7 +70,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counterTopPoint: {fileID: 3594870360951753377}
-  cutKitchenObjectSO: {fileID: 11400000, guid: a83160065f137274a936e75df0b14740, type: 2}
+  cuttingRecipeSOArr:
+  - {fileID: 11400000, guid: 5fc1d2b63d79a6046acfbf5d367279dc, type: 2}
+  - {fileID: 11400000, guid: a05db22cdc23bfd48a6f77bf37bdf87a, type: 2}
+  - {fileID: 11400000, guid: 95a066243833dbd4da25bfe4ebe2c4cd, type: 2}
 --- !u!1 &5143563964179471969
 GameObject:
   m_ObjectHideFlags: 0
