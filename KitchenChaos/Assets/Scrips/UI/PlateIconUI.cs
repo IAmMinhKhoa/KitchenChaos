@@ -19,7 +19,6 @@ public class PlateIconUI : MonoBehaviour
 
     private void PlateKitchenObject_OnIngredientAdded(object sender, PlateKitchenObject.OnIngredientAddedEventArgs e)
     {
-        Debug.Log("huhu");
         UpdateVisual();
     }
 
