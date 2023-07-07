@@ -1,9 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class KitchenGameManager : MonoBehaviour
 {
+    public static KitchenGameManager Instance { get; private set; }
+
+    public event EventHandler OnStateChanged;
     private enum State
     {
         WaitingToStart,
@@ -15,10 +19,12 @@ public class KitchenGameManager : MonoBehaviour
     private State state;
     public float waitingToStartTimer = 1f;
     public float CountdownToStartTimer = 3f;
-    public float gamePlayingToStartTimer = 10f;
+    protected float gamePlayingTimer;
+    public float gamePlayingTimerMax=10f;
 
     private void Awake()
     {
+        Instance = this;
         state = State.WaitingToStart;  
     }
 
@@ -31,6 +37,7 @@ public class KitchenGameManager : MonoBehaviour
                 if(waitingToStartTimer < 0f)
                 {
                     state = State.CountdownToStart;
+                    OnStateChanged?.Invoke(this, EventArgs.Empty);
                 }
                 break;
             case State.CountdownToStart:
@@ -38,13 +45,16 @@ public class KitchenGameManager : MonoBehaviour
                 if (CountdownToStartTimer < 0f)
                 {
                     state = State.GamePlaying;
+                    gamePlayingTimer = gamePlayingTimerMax;
+                    OnStateChanged?.Invoke(this, EventArgs.Empty);
                 }
                 break;
             case State.GamePlaying:
-                gamePlayingToStartTimer -= Time.deltaTime;
-                if (gamePlayingToStartTimer < 0f)
+                gamePlayingTimer -= Time.deltaTime;
+                if (gamePlayingTimer < 0f)
                 {
                     state = State.GameOver;
+                    OnStateChanged?.Invoke(this, EventArgs.Empty);
                 }
                 break;
             case State.GameOver:
@@ -56,5 +66,24 @@ public class KitchenGameManager : MonoBehaviour
     public bool IsGamePlaying()
     {
         return state == State.GamePlaying;
+    }
+
+    public bool IsCountDownToStartActive()
+    {
+        return state == State.CountdownToStart;
+    }
+
+    public float GetCountDownToStartTimer()
+    {
+        return CountdownToStartTimer;   
+    }
+
+    public bool IsGameOver()
+    {
+        return state == State.GameOver;
+    }
+    public float GetTimePlayingTimerNormalized()
+    {
+        return 1-(gamePlayingTimer / gamePlayingTimerMax);
     }
 }
