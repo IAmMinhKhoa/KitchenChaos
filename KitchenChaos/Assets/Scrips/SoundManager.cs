@@ -6,8 +6,9 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance { get; private set; }
 
-
     [SerializeField] private AudioPresSO audioPresSO;
+
+    private float volume = 1f;
 
     private void Awake()
     {
@@ -71,4 +72,18 @@ public class SoundManager : MonoBehaviour
     {
         PlaySound(audioPresSO.footstep, position,volume); 
     }
+
+    public void ChangeVolume()
+    {
+        volume += 0.1f;
+        if (volume > 1f)
+        {
+            volume = 0f;
+        }
+    }
+    
+    public float GetVolume() {
+        return volume;
+    }
+
 }
