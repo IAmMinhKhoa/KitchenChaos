@@ -75,6 +75,12 @@ public class SoundManager : MonoBehaviour
         PlaySound(audioPresSO.footstep, position,volume); 
     }
 
+    public void PlayWarningSound(Vector3 position)
+    {
+        Debug.Log("cc");
+        PlaySound(audioPresSO.warning, position);
+    }
+
     public void ChangeVolume()
     {
         volume += 0.1f;
